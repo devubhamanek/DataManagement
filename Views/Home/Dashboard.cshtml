@@ -1,0 +1,99 @@
+﻿@using Microsoft.AspNetCore.Http;
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!doctype html>
+<html ng-app="mymodal">
+
+<body>
+    <div id="page-wraper" style="min-height:570px;">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h1>  <span class="">Dashboard</span></h1>
+
+                    @if (TempData["Success"] != null)
+                    {
+                        <p class="alert-success" style="padding: 5px;"><i class="glyphicon glyphicon-ok">&nbsp;</i>@TempData["Success"]</p>
+                    }
+                    <hr />
+                </div>
+                <br />
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    Inward
+                                </h3>
+                            </div>
+                            <div class="panel-body">
+                                <a href="/Home/InBound">
+                                    <img src="~/Images/inbound.png" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    Outward
+
+                                </h3>
+                            </div>
+                            <div class="panel-body">
+                                <a href="/Home/OutBound">
+                                    <img src="~/Images/outbound.png" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    Document
+
+                                </h3>
+                            </div>
+                            <div class="panel-body">
+                                <a href="/Home/Form">
+                                    <img src="~/Images/form-clipart-Forms.jpg" />
+                                    @*<img src="~/Images/inbound.png" />*@
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    BJP
+
+                                </h3>
+                            </div>
+                            <div class="panel-body">
+                                <a href="/Home/Form">
+                                    <img src="~/Images/form-clipart-Forms.jpg" />
+                                    @*<img src="~/Images/inbound.png" />*@
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+

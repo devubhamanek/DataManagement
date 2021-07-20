@@ -1,0 +1,48 @@
+﻿@model Dm.Common.Models.Category1
+
+@{
+    ViewData["Title"] = "Category1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Category1</h2>
+<h3>@ViewData["Message"]</h3>
+@*<h4>Category1</h4>*@
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Category1">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group hidden">
+                    <label asp-for="Id" class="control-label"></label>
+                    <input asp-for="Id" class="form-control" />
+                    <span asp-validation-for="Id" class="text-danger"></span>
+                </div>
+            <div class="form-group">
+                <label asp-for="mainCategory" class="control-label">MainCategory</label>
+                <select asp-for="mainCategory" asp-items="Model.listOfCategory" class="form-control">
+                    <option value=" ">--select--</option>
+                </select>
+                <span asp-validation-for="mainCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="subCategory1" class="control-label">SubCategory1</label>
+                @*<input asp-for="subCategory1" class="form-control" />*@
+                <select asp-for="subCategory1" asp-items="Model.listOfCategory1" class="form-control">
+                    <option value=" ">--select--</option>
+                </select>
+                <span asp-validation-for="subCategory1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="name" class="control-label">Name</label>
+                <input asp-for="name" class="form-control" value=" " />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-success" />
+                <input type="button" value="Cancel" class="btn btn-danger" />
+            </div>
+        </form>
+    </div>
+</div>
+

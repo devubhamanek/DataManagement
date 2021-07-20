@@ -1,0 +1,39 @@
+﻿@*@model Dm.Common.Models.UserLogin*@
+@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor HttpContextAccessor
+
+<style>
+    .signup {
+        background-color: transparent;
+        color: white;
+        border: none;
+        float: right;
+        padding-top: 14.5px;
+        padding-bottom: 14.5px;
+    }
+
+    .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+        color: #ffffff;
+        background-color: #4e9f15;
+        border-color: #1862b5;
+    }
+</style>
+<div class="one">
+    @{
+
+
+        var UserName = @HttpContextAccessor.HttpContext.Session.GetString("Test");
+        if (UserName!=null) { 
+        <div class="dropdown navbar-right">
+            <button class="dropbtn">@UserName</button>
+            <div class="dropdown-content">
+                <div class="dropdown-divider"></div>
+                <a asp-action="Logout">Sign Out</a>
+
+            </div>
+        </div>
+        }
+    }
+</div>
+@*@if (roleId != 1)*@
+<div style="margin-right:80px"> <a asp-action="Registration"><button class="btn btn-primary signup">SignUp</button></a></div>

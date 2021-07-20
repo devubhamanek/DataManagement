@@ -1,0 +1,860 @@
+﻿@model Dm.Common.Models.FinalDataUpload
+@{
+    ViewData["Title"] = "InBound";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>*@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+@*<script src="https://cdn.datatables.net/1.10.1/js/jquery.datatables.min.js"></script>
+    <link href="~/css/jquery.dataTables.min.css" rel="stylesheet">*@
+
+
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js "></script>
+
+
+
+<style>
+    .Format {
+        font-size: 17px;
+        font-weight: normal !important;
+    }
+
+    .design {
+        margin-left: 165px;
+        margin-top: -56px;
+        display: flex;
+    }
+
+    .main {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #ff7518;
+    }
+
+
+    .tree1, #myUL {
+        list-style-type: none;
+    }
+
+    #myUL {
+        margin: 0;
+        padding: 0;
+    }
+
+    .year {
+        cursor: pointer;
+        -webkit-user-select: none; /* Safari 3.1+ */
+        -moz-user-select: none; /* Firefox 2+ */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none;
+        font-weight: 700;
+    }
+
+        .year::before {
+            content: "\25B6";
+            color: black;
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+    .year-down::before {
+        -ms-transform: rotate(90deg); /* IE 9 */
+        -webkit-transform: rotate(90deg); /* Safari */
+        ' transform: rotate(90deg);
+    }
+
+    .nested {
+        display: none;
+        margin-left: 30px;
+    }
+
+    .active {
+        display: block;
+    }
+
+    .Listing {
+        background-color: bisque;
+        border: 1px solid;
+        padding: 7px 0px 7px 0px;
+        text-align: center
+    }
+
+    th {
+        text-align: center
+    }
+
+    .Design {
+        height: auto;
+        /*display: inline-block;*/
+        width: 100%;
+        overflow: auto;
+        text-align: center;
+    }
+
+    .table-bordered {
+        border: none;
+    }
+
+    .Month {
+        cursor: pointer;
+    }
+
+    /*hide Serchbar*/
+    #UploadData_info, #UploadData_wrapper #UploadData_filter {
+        display: none;
+    }
+
+    .Icon {
+        font-size: 20px;
+        color: darkcyan;
+        cursor: pointer !important;
+    }
+
+    .dataTables_wrapper .dataTables_paginate span .paginate_button + span {
+        display: none;
+    }
+</style>
+
+
+
+
+
+<div class="row">
+    <div class="col-md-2 ">
+        <h2>InWard</h2>
+
+    </div>
+
+    @*Navigation*@
+
+    <span class="main design" style="margin-top: 19px;padding: 10px;color: white;">
+        <span> @ViewBag.Maincategory</span>
+        <span style="margin-left:10px"> / @ViewBag.subCategory1</span>
+        <span style="margin-left:10px"> / @ViewBag.subCategory2</span>
+        <span style="margin-right: 10px;margin-left:10px">/ @ViewBag.subCategory3</span>/
+        @*for Static Yer Display*@
+        <span style="margin-right:10px;margin-left:10px" type="text" asp-for="year" id="Year">@ViewBag.FileYear</span>/
+        <span style="margin-right:10px;margin-left:10px" type="text" asp-for="month" id="Month">@ViewBag.FileMonth</span>
+    </span>
+
+    <hr>
+    <div class="col-md-10">
+        @if (ViewBag.DirPath != null)
+        {
+            <h3 style="margin-top:27px">
+                @ViewBag.DirPath
+            </h3>
+        }
+        else
+        {
+            <h2></h2>
+        }
+    </div>
+</div>
+
+
+@*Display-Success-Message*@
+@*<div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-10">
+
+            @if (TempData["Success"] != null && Convert.ToInt64(TempData["TypeID"]) == 1)
+            {
+                <p class="alert-success" style="padding: 5px;"><i class="glyphicon glyphicon-ok">&nbsp;</i>@TempData["Success"]</p>
+            }
+
+        </div>
+    </div>*@
+
+<div class="row">
+    @* Start TreeView *@
+    <div class="col-md-2">
+        <input type="submit" value="Add Year" class="btn btn-xs btn-success" />
+        <div style="height: 425px;overflow: auto;border-right: 1px solid #eee; padding-top: 5px;">
+
+            @*Dynamic Data bind from the ajax*@
+            <ul class="tree1" id="dvitems">
+                @*TREE-VIEW PRINTED HERE*@
+            </ul>
+        </div>
+    </div>
+    @*END*@
+
+
+    @*Actionbox*@
+    <div class="col-md-10">
+        <div style="border:1px solid #222;" class="panel panel-primary">
+            <div style="background-color: #ff7518;" class="panel-heading">
+                <div class="row">
+                    <div class="col-md-8">
+                        @*<ul class="nav navbar-nav">
+                                <li>
+                                    <input class="btn btn-danger" type="submit" value="Delete" disabled onclick="return confirm('Are you sure you want to delete this forms?');">
+                                </li>
+                            </ul>*@
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <input type="submit" id="UploadPopup" value="Upload" class="btn btn-primary" />
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+
+                        <table style="margin:0px;" class="navbar-right">
+                            <tr>
+                                <td>
+                                    <ul class="nav navbar-nav ">
+                                        <li>
+                                            <input class="form-control" id="myInput" onkeyup="mySearch()" placeholder="Search by name  " type="text">
+                                        </li>
+                                    </ul>
+                                    @*<ul class="nav navbar-nav ">
+                                            <li>
+                                                <input type="submit" value="Search" class="btn btn-success" />
+                                            </li>
+                                        </ul>*@
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            @*Listing Part Start*@
+            <div class="panel-body">
+                <table id="UploadData" class="table table-bordered Design">
+                    <thead class="bg-primary text-white">
+                        <tr>
+                            <th>Name</th>
+                            <th>FileName</th>
+                            <th>CreateBy</th>
+                            <th>CreatedDate</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                            <th>Download</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @*<label>
+                                Show
+                                <select class="PageSize" aria-controls="UploadData">
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select> entries
+                            </label>*@
+                    </tbody>
+                </table>
+                @*End*@
+            </div>
+        </div>
+    </div>
+</div>
+@*Upload Model*@
+<form id="form1" asp-action="InBound" runat="server" enctype="multipart/form-data">
+    <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="ModalTitle"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="ModalTitle">
+                        Document Upload
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="control-label col-md-3">
+                                <b>Month:</b>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="hidden" asp-for="month" id="hdmonth" />
+                                <label type="text" id="lblmonth" class="control-label Format"></label>
+                                @*For Validation*@
+                                <span style="color:red;display:none" id="valmonth">Please Select Month</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="control-label col-md-3">
+                                <b>Year:</b>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="hidden" asp-for="year" id="hdlyear" />
+                                <label type="text" id="lblyear" class="control-label Format"></label>
+                                @*For Validation*@
+                                <span style="color:red;display:none" id="valyear">Please Select Year</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="control-label col-md-3">
+                                <b>File:</b>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="file" name="fileName" asp-for="fileName" id="fileName" />
+                                @*For Validation*@
+                                <script>
+                                    //for remove old File
+                                    $("#fileName").click(function () {
+                                        $("#valFile").hide();
+                                        $("#FileType").hide()
+                                        $("#FileSize").hide()
+                                    });
+                                </script>
+                                <span style="color:red;display:none" id="valFile">Please Select File</span>
+                                <span style="color:red;display:none" id="FileType">Please select valid file. (pdf, docx, doc, jpg, png, jpeg, gif, tiff, psd, ai, svg, jif, jfif)</span>
+                                <span style="color:red;display:none" id="FileSize">To Big File, Maximum is 10MB. </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="control-label col-md-3">
+                                <b>Name:</b>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" asp-for="name" id="name" class="form-control" />
+                                @*For Validation*@
+                                <script>
+                                    //for remove Validation error Msg
+                                    $("#name").click(function () {
+                                        $("#valName").hide()
+                                    });
+                                </script>
+                                <span style="color:red;display:none" id="valName">Please Enter Name</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="text-align:center!important">
+                    <input type="submit" onclick="return validate1();" value="Save" class="btn btn-success" />
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $('#fileName').on('change', function () {
+            var numb = $(this)[0].files[0].size / 1024 / 1024;
+            numb = numb.toFixed(2);
+            if (numb > 5) {
+                $("#FileSize").css("display", "");
+                //alert('To Big File, Maximum is 10MB. Your file size is: ' + numb + ' MB');
+                $("#fileName").val('');
+            } else {
+                //alert('it okey, your file has ' + numb + 'MB')
+
+                myfile = $(this).val();
+                var ext = myfile.split('.').pop();
+                if (ext == "pdf" || ext == "docx" || ext == "doc" || ext == "jpg" || ext == "png" || ext == "jpeg" || ext == "gif" || ext == "TIFF" || ext == "PSD" || ext == "AI" || ext == "SVG" || ext == "jif" || ext == "jfif") {
+                    //alert('valid');
+
+                } else {
+                    $("#FileType").css("display", "");
+                    //alert('Please select valid file');
+                    $("#fileName").val('');
+                }
+            }
+        });
+    </script>
+
+</form>
+
+@*EditModal*@
+<form asp-action="UpdateInwardFile" id="form2" runat="server" enctype="multipart/form-data">
+    <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="ModalTitle"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="ModalTitle">
+                        Document Edit
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="control-label col-md-3">
+                                <b style="display:none">Id:</b>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="hidden" asp-for="docId" class="form-control" id="hddocId" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="control-label col-md-3">
+                                <b>Month:</b>
+                            </div>
+                            <div class="col-md-9">
+                                <label type="text" id="flmonth" class="control-label Format"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="control-label col-md-3">
+                                <b>Year:</b>
+                            </div>
+                            <div class="col-md-9">
+                                <label type="text" id="flyear" class="control-label Format"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="control-label col-md-3">
+                                <b>File:</b>
+                            </div>
+                            <div class="col-md-9">
+                                <button type="button" class="close" id="ImgRemove">
+                                    ×
+                                </button>
+                                <input type="button" asp-for="fileName" id="hdfileName" />
+                                <input type="file" asp-for="fileName" id="fileName2" />
+                                <script>
+                                    //for remove old File & Validation error Msg
+                                    $("#fileName2").click(function () {
+                                        $("#hdfileName").remove();
+                                        $("#ImgRemove").hide()
+                                        $("#FileType2").hide()
+                                        $("#FileSize2").hide()
+                                    });
+                                </script>
+                                @*<img src="" id="imgUpload" style="height:20px;width:20px"/>*@
+
+                                @*For Validation*@
+                                <span style="color:red;display:none" id="FileType">Please select valid file. (pdf, docx, doc, jpg, png, jpeg, gif, tiff, psd, ai, svg, jif, jfif)</span>
+                                <span style="color:red;display:none" id="FileSize2">To Big File, Maximum is 10MB. </span>
+                                <span style="color:red;display:none" id="FileValid">Please select file</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="control-label col-md-3">
+                                <b>Name:</b>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" asp-for="name" class="form-control" id="hdname" />
+                                @*For Validation*@
+                                <script>
+                                    //for remove Validation error Msg
+                                    $("#hdname").click(function () {
+                                        $("#NameValid").hide()
+                                    });
+                                </script>
+                                <span style="color:red;display:none" id="NameValid">Please Enter Name</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="text-align:center!important">
+                    <input type="submit" onclick="return validate2();" value="Save" class="btn btn-success" />
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $('#fileName2').on('change', function () {
+            var numb = $(this)[0].files[0].size / 1024 / 1024;
+            numb = numb.toFixed(2);
+            if (numb > 5) {
+                $("#FileSize2").css("display", "");
+                //alert('To Big File, Maximum is 10MB. Your file size is: ' + numb + ' MB');
+                $("#fileName2").val('');
+            } else {
+
+                myfile = $(this).val();
+                var ext = myfile.split('.').pop();
+                if (ext == "pdf" || ext == "docx" || ext == "doc" || ext == "jpg" || ext == "png" || ext == "jpeg" || ext == "gif" || ext == "TIFF" || ext == "PSD" || ext == "AI" || ext == "SVG" || ext == "jif" || ext == "jfif") {
+
+                } else {
+                    $("#FileType2").css("display", "");
+                    //alert('Please select valid file');
+                    $("#fileName2").val('');
+                }
+            }
+        });
+    </script>
+
+</form>
+
+
+
+@*For Upload Form Validation Start*@
+<script>
+
+    function validate1() {
+
+
+        $("#valFile").css("display", "none");
+        $("#valName").css("display", "none");
+        $("#valyear").css("display", "none");
+        $("#valmonth").css("display", "none");
+
+        var fileName = $('#fileName').val();
+        var name1 = $('#name').val();
+        var year = $('#hdlyear').val();
+        var month = $('#hdmonth').val();
+        $(".error").remove();
+
+        if (fileName.length < 1) {
+            $("#valFile").css("display", "");
+             //for hide file error if submit form
+            $("#FileType").hide()
+            $("#FileSize").hide()
+            return false;
+        }
+
+        if (name1.length < 1) {
+            $("#valName").css("display", "");
+            //for hide file error if submit form
+            $("#FileType").hide()
+            $("#FileSize").hide()
+            return false;
+        }
+        if (year.length < 1) {
+            $("#valyear").css("display", "");
+            return false;
+        }
+        if (month.length < 1) {
+            $("#valmonth").css("display", "");
+            return false;
+        }
+
+        return true;
+    }
+
+    function val() {
+        $('#form1').submit(function (e) {
+            e.preventDefault();
+           
+        });
+    }
+
+</script>
+@*END*@
+@*For Edit Form Validation Start*@
+<script>
+
+    function validate2() {
+
+        $("#FileValid").css("display", "none");
+        $("#NameValid").css("display", "none");
+
+        var fileName = $('#fileName2').val();
+        var name1 = $('#hdname').val();
+
+        $(".error").remove();
+
+        //if (fileName.length < 1) {
+        //    $("#FileValid").css("display", "");
+
+        //    return false;
+        //}
+
+        if (name1.length < 1) {
+            $("#NameValid").css("display", "");
+            //for hide file error if submit form
+            $("#FileType2").hide()
+            $("#FileSize2").hide()
+            return false;
+        }
+
+        return true;
+    }
+
+    function val2() {
+        $('#form2').submit(function (e) {
+            e.preventDefault();
+        });
+    }
+</script>
+@*End*@
+
+
+@*Search Data*@
+<script>
+
+    function mySearch() {
+
+        var input, filter, table, tr, td, th, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("UploadData");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+@*AJAX Call InWard CRUD Operation*@
+
+<script type="text/javascript">
+
+    function FillDatatable(month) {
+      
+
+        $("#UploadData").DataTable({
+            "processing": true, // for show progress bar
+            "serverSide": true, // for process server side
+            "filter": true, // this is for disable filter (search box)
+            "orderMulti": true, // for disable multiple column at once
+            "pageResize": true,
+            "bDestroy": true,
+            "fnDrawCallback": function (oSettings) {
+                if ($('#UploadData td').length <= 10) {
+                    $('.dataTables_paginate').hide();
+                }
+            },
+            "ajax": {
+                "url": "/Home/GetFinalDataList?month=" + month + '&Year=' + $("#Year").text(),
+                //"url": "/Home/GetFinalDataList?month=" + month + '&Year=' + $("#Year").text() + '&pageIndex=' + 0 + '&pageSize=' + PageSize,
+                "type": "POST",
+                "datatype": "json",
+                "dataSrc": ''
+            },
+            "columns": [
+                { "data": "name", "name": "Name", "autoWidth": true },
+                { "data": "fileName", "name": "FileName", "autoWidth": true },
+                { "data": "createdBy", "name": "CreateBy", "autoWidth": true },
+                { "data": "createdDate", "name": "CreateBy", "autoWidth": true },
+                {
+                    'data': "docId",
+                    'render': function (data, type, row) {
+                        return '<i class="fa fa-edit Icon" onclick=" getbyID(' + row.docId + ')"></i>'
+                    }
+                },
+                {
+                    'data': "docId",
+                    'render': function (data, type, row) {
+                        return '<i class="fa fa-trash-o Icon" style="color: red;" onclick=" DltgetbyID(' + row.docId + ')"></i>'
+                    }
+                },
+                {
+                    'data': "docId",
+                    'render': function (data, type, row) {
+                        return '<i class="fa fa-download Icon" onclick=" DowloadID(' + row.docId + ')"></i>'
+                    }
+                },
+
+            ]
+        });
+    }
+
+    //Edit
+    function getbyID(docId) {
+       
+        $.ajax({
+            url: "/Home/EditInwardFile/" + docId,
+            typr: "GET",
+            //contentType: "application/json;charset=UTF-8",
+            //dataType: "json",
+            success: function (result) {
+                
+                $(result).each(function (index) {
+                    $("#hddocId").val(result[index].docId);
+                    $("#hdname").val(result[index].name);
+                    $("#hdfileName").val(result[index].fileName);
+                    //for remove old File
+                    $("#ImgRemove").click(function () {
+                        $("#hdfileName").remove();
+                        $("#ImgRemove").hide()
+                    });
+
+                    $("#flyear").text(result[index].year);
+                    $("#flmonth").text(result[index].month);
+                    $('#EditModal').modal('show');
+                    $('#btnUpdate').show();
+                    $('#btnAdd').hide();
+                })
+            },
+            error: function (errormessage) {
+                alert(errormessage.responseText);
+            }
+        });
+        return false;
+    }
+    //Update
+    //function Update() {
+    //    
+    //    var res = validate();
+    //    if (res == false) {
+    //        return false;
+    //    }
+    //    
+    //    var empObj = {
+    //        docId: $('#hddocId').val(),
+    //        name: $('#hdname').val(),
+    //        fileName: $('#hdfileName').val(),
+    //    };
+    //    
+    //    $.ajax({
+    //        url: "/Home/UpdateInwardFile",
+    //        data: JSON.stringify(empObj),
+    //        type: "POST",
+    //        contentType: "application/json;charset=utf-8",
+    //        dataType: "json",
+    //        success: function (result) {
+    //            //loadData();
+    //            //$('#myModal').modal('hide');
+    //            //$('#hddocId').val("");
+    //            //$('#hdname').val("");
+    //            //$('#hdfileName').val("");
+    //            Reload();
+    //        },
+    //        error: function (errormessage) {
+    //            alert(errormessage.responseText);
+    //        }
+    //    });
+    //}
+    //Delete
+    function DltgetbyID(docId) {
+        var ans = confirm("Are you sure you want to delete this Record?");
+        if (ans) {
+            $.ajax({
+                url: "/Home/DeleteInwardFile/" + docId,
+                type: "GET",
+                contentType: 'application/json; charset=utf-8',
+                success: function (result) {
+
+                    if (result == "Deleted") {
+                        //FillDatatable();
+                        setTimeout(function () {
+                            Reload();
+                        }, 500);
+                    }
+                }, error: function (errormessage) {
+                    alert(errormessage.responseText);
+                }
+            });
+        }
+    }
+    //Download
+    function DowloadID(docId) {
+        $.ajax(
+            {
+                url: '/Home/DownloadInwardFile/' + docId,
+                contentType: 'application/json; charset=utf-8',
+                datatype: 'json',
+                type: "GET",
+                success: function () {
+                    window.location = '/Home/DownloadInwardFile/' + docId;
+                }
+            });
+
+    }
+
+</script>
+
+
+@*For Model Popup*@
+<script type="text/javascript">
+
+
+    $(function () {
+        $("#UploadPopup").click(function () {
+            $("#lblyear").text($("#Year").text());
+            $("#lblmonth").text($("#Month").text());
+            $('#LoginModal').modal('show');
+            $("#hdmonth").val($("#Month").text());
+            $("#hdlyear").val($("#Year").text());
+        });
+    });
+</script>
+
+@*For Display Month Year Tree*@
+<script>
+
+
+    function myFunction(id, year) {
+        //Null Previous Month Function If select New Year{
+        //MonthFunction(null)
+        //END}
+        $('#year-' + id + ' ul').html('');
+        document.getElementById("Year").innerHTML = year;
+        $.ajax({
+            type: "GET",
+            url: "/Home/GetMonthData?id=" + id,
+            contentType: "application/json",
+            dataType: "json",
+            success: function (response) {
+
+                $(response).each(function (index) {
+                    var idToAppend = '#year-' + id + ' ul';
+                    $(idToAppend).append('<li class="Month" onclick="MonthFunction(' + "'" + response[index].month + "'" + ')">' + response[index].month + '</li>');
+                });
+                debugger
+                var clsList = $('#year-' + id + ' ul');
+                clsList[0].classList.toggle("active");
+
+                var yeardown = $('#year-' + id + ' .year');
+                yeardown[0].classList.toggle("year-down");
+            }
+        });
+    }
+
+    function MonthFunction(month) {
+        document.getElementById("Month").innerHTML = month;
+        FillDatatable(month);
+
+        sessionStorage.setItem("postback_month", month);
+        sessionStorage.setItem("postback_year", document.getElementById("Year").innerHTML);
+    }
+</script>
+
+
+@*Ajex Call For GET Year Tree*@
+<script>
+
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "/Home/GetYearData",
+            contentType: "application/json",
+            dataType: "json",
+            success: function (response) {
+
+                $(response).each(function (index) {
+                    var html = '<li id="year-' + response[index].id + '">';
+                    html += '<span class="year" onclick="myFunction(' + response[index].id + ',' + response[index].year + ')">' + response[index].year + '</span>';
+                    html += '<ul class="nested"></ul>';
+                    html += '</li>';
+                    $('#dvitems').append(html);
+                });
+
+            },
+            failure: function (response) {
+                alert(response);
+            }
+        });
+
+        setTimeout(function () {
+            Reload();
+        }, 500);
+
+    });
+
+    function Reload() {
+        var data = sessionStorage.getItem("postback_month");
+        if (data != undefined && data != null) {
+            MonthFunction(data);
+        }
+    }
+</script>
+
+
+

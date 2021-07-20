@@ -1,0 +1,70 @@
+﻿@model Dm.Common.Models.Category
+
+
+@{
+    ViewData["Title"] = "Category";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Category</h2>
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        /*overflow: hidden;*/
+        background-color: #ff7518;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    .nav > li > a:hover, .nav > li > a:focus {
+        color: #ffffff;
+        background-color: #4e9f15;
+    }
+
+    .design {
+        margin-left: 165px;
+        margin-top: -56px;
+        display: flex;
+    }
+</style>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Category">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label for="sel1" asp-for="mainCategory" class="control-label">MainCategory</label>
+                <input asp-for="mainCategory" class="form-control" />
+                <ul class="nav design">
+                    @foreach (var item in ViewBag.listOfCategory)
+                    {
+                        <li><a href="#">@item.name</a></li>}
+
+                </ul>
+                <span asp-validation-for="mainCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="name" class="control-label">Name</label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-success" />
+                <input type="submit" value="Cancel" class="btn btn-danger" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@*<div>
+        <a asp-action="Index">Back to List</a>
+    </div>*@
+

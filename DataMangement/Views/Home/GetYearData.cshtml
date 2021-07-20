@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Dm.Common.Models.YearTree>
+
+@{
+    ViewData["Title"] = "GetYearData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetYearData</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.month)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.month)
+            </td>
+           
+        </tr>
+}
+    </tbody>
+</table>

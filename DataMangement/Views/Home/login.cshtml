@@ -1,0 +1,92 @@
+﻿@model Dm.Common.Models.UserLogin
+@{
+    ViewData["Title"] = "login";
+    Layout = "~/Views/Shared/_Default.cshtml";
+   // Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align: center;
+    font-weight: 800;color: tomato;">
+    @ViewBag.ErrorMessage
+</h2>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    @*<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - Document Management</title>
+        <link href="~/css/bootstrap.css" rel="stylesheet">
+        <link href="~/css/site.css" rel="stylesheet">*@
+    <style type="text/css">
+
+        .design1 {
+            margin-top: 10px
+        }
+
+        .design2 {
+            margin-top: 25px
+        }
+
+        .Forgot {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div style="margin-top: 100px;">
+                <div class="panel panel-success" style="width: 120%;">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">User Login</h3>
+                    </div>
+                    <form asp-action="login">
+                        <div class="panel-body" style="padding-top15px">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+
+                                <label asp-for="Email " class="control-label design1 col-md-4">Email / ઇમેઇલ :</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" id="Email" asp-for="Email" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password" class="control-label design2 col-md-4 ">Password /પાસવર્ડ :</label>
+                                <div class="col-md-8">
+                                    <input class="form-control format" id="Password" type="password" asp-for="Password" />
+                                    <div style="margin-bottom: 12px;"><input type="checkbox" onchange="document.getElementById('Password').type=this.checked?'text':'Password'"><span style="margin-left: 6px;">Show Password / પાસવર્ડ જુઓ</span></div>
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <span class="error" id="invalid"></span>
+                            <div class="form-group">
+                                <div class="control-label col-md-4">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="submit" value="Login" class="btn btn-success btn-block btn-sm" />
+
+                                </div>
+                                @*<a class="Forgot">Forgot Password?</a>*@
+                                <a class="Forgot" asp-action="/ForgotPassword">Forgot Password? <br> પાસવર્ડ ભૂલી ગયા છો?</a>
+
+                                @*<span class="Forgot" href='@Url.Action("ForgotPassword", "Home")'>Forgot Password?</span>*@
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        @*<a asp-action="Index">Back to List</a>*@
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.csproj.CoreCompileInputs.cache
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.AssemblyInfoInputs.cache
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.AssemblyInfo.cs
+D:\Hardik\DataMangement\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.deps.json
+D:\Hardik\DataMangement\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.runtimeconfig.json
+D:\Hardik\DataMangement\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.runtimeconfig.dev.json
+D:\Hardik\DataMangement\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.dll
+D:\Hardik\DataMangement\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.pdb
+D:\Hardik\DataMangement\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.Views.dll
+D:\Hardik\DataMangement\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.Views.pdb
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.csprojAssemblyReference.cache
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.RazorAssemblyInfo.cache
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.RazorAssemblyInfo.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.TagHelpers.input.cache
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.TagHelpers.output.cache
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.RazorCoreGenerate.cache
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.RazorTargetAssemblyInfo.cache
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.RazorTargetAssemblyInfo.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.Views.pdb
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.dll
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.pdb
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.csproj.CopyComplete
+D:\Hardik\DataMangement\DataMangement\bin\Debug\netcoreapp2.1\Dm.Common.dll
+D:\Hardik\DataMangement\DataMangement\bin\Debug\netcoreapp2.1\Dm.Common.pdb
+D:\Hardik\DataMangement\DataMangement\bin\Debug\netcoreapp2.1\Dm.BAL.dll
+D:\Hardik\DataMangement\DataMangement\bin\Debug\netcoreapp2.1\Dm.DAL.dll
+D:\Hardik\DataMangement\DataMangement\bin\Debug\netcoreapp2.1\Dm.BAL.pdb
+D:\Hardik\DataMangement\DataMangement\bin\Debug\netcoreapp2.1\Dm.DAL.pdb
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Hardik\HkP.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Hardik\Index.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\bin\Debug\netcoreapp2.1\log4net.config
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\login.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.dll.config
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Dashboard.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Default.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\ForgotPassword.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\SubMenu.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\InBound.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Registration.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\UserList.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Category.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\GetProfile.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Category2.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Category3.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Category1.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\GetYearData.g.cshtml.cs
+D:\Hardik\DataMangement\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\MasterCategory.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\bin\Debug\netcoreapp2.1\log4net.config
+D:\Hardik\DataManagement_SVN\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.dll.config
+D:\Hardik\DataManagement_SVN\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.deps.json
+D:\Hardik\DataManagement_SVN\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.runtimeconfig.json
+D:\Hardik\DataManagement_SVN\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.runtimeconfig.dev.json
+D:\Hardik\DataManagement_SVN\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.dll
+D:\Hardik\DataManagement_SVN\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.pdb
+D:\Hardik\DataManagement_SVN\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.Views.dll
+D:\Hardik\DataManagement_SVN\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.Views.pdb
+D:\Hardik\DataManagement_SVN\DataMangement\bin\Debug\netcoreapp2.1\Dm.BAL.dll
+D:\Hardik\DataManagement_SVN\DataMangement\bin\Debug\netcoreapp2.1\Dm.Common.dll
+D:\Hardik\DataManagement_SVN\DataMangement\bin\Debug\netcoreapp2.1\Dm.DAL.dll
+D:\Hardik\DataManagement_SVN\DataMangement\bin\Debug\netcoreapp2.1\Dm.BAL.pdb
+D:\Hardik\DataManagement_SVN\DataMangement\bin\Debug\netcoreapp2.1\Dm.Common.pdb
+D:\Hardik\DataManagement_SVN\DataMangement\bin\Debug\netcoreapp2.1\Dm.DAL.pdb
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.csprojAssemblyReference.cache
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.csproj.CoreCompileInputs.cache
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.RazorAssemblyInfo.cache
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.RazorAssemblyInfo.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.AssemblyInfoInputs.cache
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.AssemblyInfo.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.TagHelpers.input.cache
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.TagHelpers.output.cache
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.RazorCoreGenerate.cache
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Hardik\HkP.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Hardik\Index.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Category.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Category1.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Category2.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Category3.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Dashboard.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\ForgotPassword.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\GetProfile.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\GetYearData.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\InBound.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\login.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\MasterCategory.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Registration.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\SubMenu.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\UserList.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Default.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.RazorTargetAssemblyInfo.cache
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.RazorTargetAssemblyInfo.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.Views.pdb
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.csproj.CopyComplete
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.dll
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.pdb
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+D:\Hardik\DataManagement_SVN\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\OutWard.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.csprojAssemblyReference.cache
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.csproj.CoreCompileInputs.cache
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.RazorAssemblyInfo.cache
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.RazorAssemblyInfo.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.AssemblyInfoInputs.cache
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.AssemblyInfo.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.TagHelpers.input.cache
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.TagHelpers.output.cache
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.RazorCoreGenerate.cache
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Hardik\HkP.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Hardik\Index.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Category.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Category1.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Category2.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Category3.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Dashboard.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\ForgotPassword.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\GetProfile.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\GetYearData.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\InBound.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\login.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\MasterCategory.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Registration.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\SubMenu.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Home\UserList.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Default.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.RazorTargetAssemblyInfo.cache
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.RazorTargetAssemblyInfo.cs
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.dll
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.pdb
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\bin\Debug\netcoreapp2.1\log4net.config
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.dll.config
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.deps.json
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.runtimeconfig.json
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.runtimeconfig.dev.json
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.dll
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.pdb
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.Views.dll
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\bin\Debug\netcoreapp2.1\DataMangement.Views.pdb
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\bin\Debug\netcoreapp2.1\Dm.BAL.dll
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\bin\Debug\netcoreapp2.1\Dm.Common.dll
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\bin\Debug\netcoreapp2.1\Dm.DAL.dll
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\bin\Debug\netcoreapp2.1\Dm.BAL.pdb
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\bin\Debug\netcoreapp2.1\Dm.Common.pdb
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\bin\Debug\netcoreapp2.1\Dm.DAL.pdb
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.Views.pdb
+D:\Mahavir Backup\Projects\DataManagement\Source\DataMangement\obj\Debug\netcoreapp2.1\DataMangement.csproj.CopyComplete

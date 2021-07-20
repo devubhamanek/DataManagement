@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Dm.Common.Models.SubMenu>
+@{
+    ViewData["Title"] = "InBound";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<img src="~/Images/inbound-logo.png" style="height: 64px; width: 166px;
+    padding: 15px 8px 21px 0px;" />
+<style>
+
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        /*overflow: hidden;*/
+        background-color: #ff7518;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    .nav > li > a:hover, .nav > li > a:focus {
+        color: #ffffff;
+        background-color: #4e9f15;
+    }
+
+    .design {
+        margin-left: 165px;
+        margin-top: -56px;
+        display: flex;
+    }
+</style>
+
+
+@*//For Header Menu 26-11-19*@
+<ul class="nav design">
+    @foreach (var item in ViewBag.listOfCategory)
+    {
+        <li><a href="#">@item.name</a></li>}
+
+</ul>
+<hr>
+<img src="~/Images/coming-soon.png" style="margin-left: 40%;" />

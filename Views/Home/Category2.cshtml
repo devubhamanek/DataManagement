@@ -1,0 +1,47 @@
+﻿@model Dm.Common.Models.Category2
+
+@{
+    ViewData["Title"] = "Category2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Category2</h2>
+
+@*<h4>Category2</h4>*@
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Category2">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="mainCategory" class="control-label">MainCategory</label>
+                <input asp-for="mainCategory" class="form-control" />
+                <span asp-validation-for="mainCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="subCategory1" class="control-label">SubCategory1</label>
+                <input asp-for="subCategory1" class="form-control" />
+                <span asp-validation-for="subCategory1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="subCategory2" class="control-label">SubCategory2</label>
+                <input asp-for="subCategory2" class="form-control" />
+                <span asp-validation-for="subCategory2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="name" class="control-label">Name</label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-success" />
+                <input type="submit" value="Cancel" class="btn btn-danger" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@*<div>
+    <a asp-action="Index">Back to List</a>
+</div>*@
+

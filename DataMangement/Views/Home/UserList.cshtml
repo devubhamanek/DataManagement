@@ -1,0 +1,97 @@
+﻿@model IEnumerable<Dm.Common.Models.Registration>
+
+@{
+    ViewData["Title"] = "UserList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    th {
+        text-align: center;
+        border: 1px solid #dddddd;
+    }
+    td {
+        border: 1px solid #dddddd;
+    }
+    .btn {
+        padding: 0px;
+        border-radius: 12px;
+    }
+        .btn:hover {
+            background-color: #2780e3;
+        }
+</style>
+<h2>UserList / સભ્યોની માહિતી</h2>
+
+@*<p>
+        <a asp-action="Create">Create New</a>
+    </p>*@
+<table class="table" style="text-align: center;
+    border: 1px solid #dddddd;">
+    <thead>
+        <tr style="background: #FF7518;color: white;">
+            <th>
+                @Html.DisplayNameFor(model => model.UserID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.roleId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.createdBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.createdDate)
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.roleId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.createdBy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.createdDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit / ફેરફાર", "GetProfile", new { id = item.UserID },new {@class="btn btn-primary" })
+                    @*@Html.ActionLink("Details", "Details", new {id = item.UserID})
+                        @Html.ActionLink("Delete", "Delete", new {id = item.UserID})*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
